@@ -7,22 +7,36 @@ import Image from 'next/image';
 const projects = [
   {
     title: "GenAI Workflow Frontend",
-    description: "A modern, mobile-first RAG dashboard interface built with React and Vite. Features real-time metrics monitoring, animation-rich chat interface, and system health status.",
-    tags: ["React", "Vite", "RAG", "Tailwind CSS"],
+    description: "A modern, mobile-first RAG-Agent dashboard interface built with React and Vite. Features real-time metrics monitoring, animation-rich chat interface, and system health status.",
+    tags: ["React", "Vite", "RAG", "CoVe", "QDrant", "Docker", "Docker", "Tailwind CSS"],
     links: { demo: "#", repo: "#" },
     image: "/project-1.png" // Placeholder
   },
   {
-    title: "MLOps Pipeline Orchestrator",
-    description: "End-to-end machine learning pipeline automation using Airflow and Kubernetes. Automated training, evaluation, and deployment of models.",
-    tags: ["Python", "Airflow", "Kubernetes", "Docker"],
+    title: "Clinical Scribe (Healthcare Domain)",
+    description: "Ajustez LLaMA 3 8B pour prendre des transcriptions médecin-patient désordonnées et non structurées et produire des notes cliniques structurées (format SOAP : Subjectif, Objectif, Évaluation, Plan) en utilisant une terminologie médicale spécifique.",
+    tags: ["Python", "Airflow", "Kaggle", "PEF", "LoRA", "ROGUE-L", "transformers"],
     links: { demo: "#", repo: "#" },
     image: "/project-2.png" // Placeholder
   },
   {
-    title: "NLP Sentiment Analysis API",
-    description: "High-performance FastAPI service for real-time sentiment analysis on financial news, deployed on AWS Lambda.",
-    tags: ["FastAPI", "BERT", "AWS", "Serverless"],
+    title: "Legal Contract Auditor (Legal/Finance)",
+    description: "Un modèle qui prend une clause contractuelle en entrée et identifie les <br>langages à haut risque</br> ou les écarts par rapport aux clauses standard, en citant des principes juridiques spécifiques.",
+    tags: ["Kaggle", "Python", "NEFTune", "vLLM", "transformers"],
+    links: { demo: "#", repo: "#" },
+    image: "/project-3.png" // Placeholder
+  },
+  {
+    title: "Prédiction du risque crédit par détection d’anomalie",
+    description: "Détection du risque client pour l’octroi de prêts via des techniques de détection d’anomalies.",
+    tags: ["XGBoost", "Imbalanced class", "Features Engineering", "FastAPI"],
+    links: { demo: "#", repo: "#" },
+    image: "/project-3.png" // Placeholder
+  },
+  {
+    title: "System de recommandation de vidéos sur les réseaux sociaux",
+    description: "Conception et implémentation  d'un système de recommandation de vidéos destiné aux plateformes de réseaux sociaux, avec pour objectif de personnaliser le contenu proposé aux utilisateurs et d’optimiser leur engagement (temps de visionnage, likes, partages).",
+    tags: ["ALS" "Collaborative filtering", "COntent-based filtering", "Features ENgineering", "Scikit-learn", "PySpark"],
     links: { demo: "#", repo: "#" },
     image: "/project-3.png" // Placeholder
   }

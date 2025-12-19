@@ -5,26 +5,90 @@ import { Terminal, Cpu, Database, Cloud } from 'lucide-react';
 
 const skills = [
   {
-    category: "Machine Learning",
+    category: "Tech Stack",
     icon: <Cpu className="w-6 h-6" />,
-    items: ["PyTorch", "TensorFlow", "Scikit-learn", "Hugging Face Transformers", "LLMs", "RAG"]
+    items: ["Python", "FastAPI", "SQL"]
   },
   {
-    category: "MLOps",
+    category: "MLOps & Cloud",
     icon: <Cloud className="w-6 h-6" />,
-    items: ["Docker", "Kubernetes", "CI/CD", "MLflow", "Airflow", "DVC", "Terraform"]
+    items: [
+      "Git",
+      "Docker",
+      "CI/CD",
+      "Google Cloud Platform",
+      "MLflow",
+      "Airflow",
+      "DVC (expérimental)"
+    ]
   },
   {
-    category: "Backend & Data",
+    category: "Data Science & Machine Learning",
     icon: <Database className="w-6 h-6" />,
-    items: ["Python", "FastAPI", "PostgreSQL", "MongoDB", "Vector Databases (Qdrant/Pinecone)"]
+    items: [
+      "Statistiques des données",
+      "Machine Learning",
+      "Apache Spark",
+      "Hadoop"
+    ]
   },
   {
-    category: "Tools",
+    category: "AI & GenAI",
+    icon: <Brain className="w-6 h-6" />,
+    items: [
+      "Large Language Models (LLM)",
+      "Small Language Models (SLM)",
+      "Gemini",
+      "OpenAI",
+      "Llama 3",
+      "RAG",
+      "Agentic AI",
+      "LangChain",
+      "LangGraph",
+      "LoRA",
+      "QLoRA",
+      "PEFT",
+      "vLLM"
+    ]
+  },
+  {
+    category: "Platforms & Tools",
     icon: <Terminal className="w-6 h-6" />,
-    items: ["Git", "Linux", "Bash", "AWS/GCP", "Vercel", "LangChain"]
+    items: [
+      "Vertex AI Training",
+      "Kaggle",
+      "Google Colab",
+      "Hugging Face"
+    ]
+  },
+  {
+    category: "Computer Vision & OCR",
+    icon: <Scan className="w-6 h-6" />,
+    items: [
+      "Numérisation de documents",
+      "Extraction d’informations",
+      "Reconnaissance Optique de Caractères (OCR)"
+    ]
+  },
+  {
+    category: "Certifications & Distinctions",
+    icon: <Award className="w-6 h-6" />,
+    items: [
+      "Certifiée Columbia University",
+      "Finaliste Datatour 2025"
+    ]
+  },
+  {
+    category: "Soft Skills & Langues",
+    icon: <MessageCircle className="w-6 h-6" />,
+    items: [
+      "Communication verbale et écrite exceptionnelle",
+      "Français courant",
+      "Anglais professionnel"
+    ]
   }
 ];
+
 
 export default function Skills() {
   return (

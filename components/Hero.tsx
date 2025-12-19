@@ -14,7 +14,7 @@ export default function Hero() {
         >
           <h2 className="text-xl md:text-2xl text-gray-400 mb-4">Hello, I'm a</h2>
           <h1 className="text-5xl md:text-8xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
-            Machine Learning<br /> Engineer
+            Data Scientist/ Machine Learning<br /> Engineer
           </h1>
           <motion.div 
             initial={{ opacity: 0 }}
@@ -22,7 +22,7 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-2xl md:text-4xl text-gray-400 font-light"
           >
-            Specialized in <span className="text-white font-medium">MLOps</span> & <span className="text-white font-medium">Applied NLP</span>
+            Specialized in <span className="text-white font-medium">ML</span> & <span className="text-white font-medium">Applied NLP</span>
           </motion.div>
           
           <motion.p 

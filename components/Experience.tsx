@@ -4,22 +4,22 @@ import Section from './ui/Section';
 
 const experiences = [
   {
-    role: "Machine Learning Engineer",
-    company: "Tech Company A",
-    period: "2023 - Present",
-    description: "Leading the development of LLM-based internal tools. Optimized inference latency by 40% using quantization techniques. Implemented automated retraining pipelines."
+    role: "Ingénieur DATA/IA",
+    company: "Etech Consulting",
+    period: "Depuis 2024",
+    description: "Architecture et mise en production de pipelines Data/ML de bout en bout, combinant OCR, LLM et Computer Vision pour l'automatisation de l'extraction documentaire et de la détection d'anomalies.Développement de systèmes RAG fiabilisés par la technique CoVe et de modèles de classification (ResNet) déployés en MVP, avec une évaluation rigoureuse par *ground truth*."
   },
   {
     role: "Data Scientist / ML Engineer",
-    company: "Startup B",
-    period: "2021 - 2023",
-    description: "Developed and deployed recommendation engines for e-commerce. Built data processing pipelines processing 1TB+ daily. Collaborated with product teams to define AI features."
+    company: "Relia Consulting",
+    period: "2023 - 2024",
+    description: "Conception et déploiement de pipelines Data/ML de bout en bout, incluant l'hybridation OCR/LLM avec protocole d'évaluation par *ground truth* et systèmes RAG fiabilisés. Développement de modèles de Computer Vision (ResNet) et de prédiction de stocks avec suivi expérimental sous *Weights & Biases* pour garantir la robustesse des solutions en production."
   },
   {
-    role: "Software Engineer Intern",
-    company: "Corp C",
-    period: "2020 - 2021",
-    description: "Worked on backend API development using Python/Django. Assisted in migrating legacy services to microservices architecture."
+    role: "Développeur freelance",
+    company: "RKWT OCEAN LTD",
+    period: "2021 - 2023",
+    description: "Conception et déploiement d’applications web et PWA, incluant le pilotage d'une architecture PostgreSQL stratégique pour le Ministère de l’Agriculture à Madagascar.Développement de modules applicatifs critiques pour la CNAPS, assurant l'interopérabilité des systèmes et la mise en œuvre de fonctionnalités d’aide sociale aux prestations d'accouchement."
   }
 ];
 

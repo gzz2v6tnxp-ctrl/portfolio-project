@@ -35,7 +35,7 @@ export default function Header() {
       </nav>
 
       <a 
-        href="mailto:contact@example.com" 
+        href="mailto:irinasitra67@gmail.com" 
         className="px-4 py-2 text-sm font-medium text-black bg-white rounded-full hover:bg-gray-200 transition-colors"
       >
         Contact Me
