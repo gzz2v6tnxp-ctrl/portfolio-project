@@ -1,7 +1,7 @@
 'use client';
 
 import Section from './ui/Section';
-import { Terminal, Cpu, Database, Cloud } from 'lucide-react';
+import { Award, Brain, Cloud, Cpu, Database, MessageCircle, Scan, Terminal } from 'lucide-react';
 
 const skills = [
   {
@@ -95,7 +95,7 @@ export default function Skills() {
     <Section id="skills" className="py-32">
       <h2 className="text-4xl md:text-6xl font-bold mb-16 tracking-tighter">Expertise</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {skills.map((skill, index) => (
+        {skills.map((skill) => (
           <div 
             key={skill.category} 
             className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"

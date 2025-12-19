@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Section from './ui/Section';
 
 export default function Hero() {
   return (
@@ -12,7 +11,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-xl md:text-2xl text-gray-400 mb-4">Hello, I'm a</h2>
+          <h2 className="text-xl md:text-2xl text-gray-400 mb-4">Hello, I&apos;m a</h2>
           <h1 className="text-5xl md:text-8xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
             Data Scientist/ Machine Learning<br /> Engineer
           </h1>

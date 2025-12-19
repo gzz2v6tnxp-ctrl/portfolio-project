@@ -8,7 +8,7 @@ const projects = [
   {
     title: "GenAI Workflow Frontend",
     description: "A modern, mobile-first RAG-Agent dashboard interface built with React and Vite. Features real-time metrics monitoring, animation-rich chat interface, and system health status.",
-    tags: ["React", "Vite", "RAG", "CoVe", "QDrant", "Docker", "Docker", "Tailwind CSS"],
+    tags: ["React", "Vite", "RAG", "CoVe", "QDrant", "Docker", "Tailwind CSS"],
     links: { demo: "#", repo: "#" },
     image: "/project-1.png" // Placeholder
   },
@@ -36,7 +36,7 @@ const projects = [
   {
     title: "System de recommandation de vidéos sur les réseaux sociaux",
     description: "Conception et implémentation  d'un système de recommandation de vidéos destiné aux plateformes de réseaux sociaux, avec pour objectif de personnaliser le contenu proposé aux utilisateurs et d’optimiser leur engagement (temps de visionnage, likes, partages).",
-    tags: ["ALS" "Collaborative filtering", "COntent-based filtering", "Features ENgineering", "Scikit-learn", "PySpark"],
+    tags: ["ALS", "Collaborative filtering", "Content-based filtering", "Feature engineering", "Scikit-learn", "PySpark"],
     links: { demo: "#", repo: "#" },
     image: "/project-3.png" // Placeholder
   }
@@ -53,8 +53,11 @@ export default function Projects() {
               <h3 className="text-3xl font-bold group-hover:text-gray-300 transition-colors">{project.title}</h3>
               <p className="text-gray-400 text-lg leading-relaxed">{project.description}</p>
               <div className="flex flex-wrap gap-2">
-                {project.tags.map(tag => (
-                  <span key={tag} className="px-3 py-1 text-sm rounded-full bg-white/10 text-white/80">
+                {project.tags.map((tag, tagIndex) => (
+                  <span
+                    key={`${tag}-${tagIndex}`}
+                    className="px-3 py-1 text-sm rounded-full bg-white/10 text-white/80"
+                  >
                     {tag}
                   </span>
                 ))}
@@ -70,10 +73,14 @@ export default function Projects() {
             </div>
             
             <div className="order-1 md:order-2 aspect-video bg-white/5 rounded-2xl overflow-hidden border border-white/10 relative group-hover:border-white/20 transition-colors">
-               <div className="absolute inset-0 flex items-center justify-center text-gray-600">
-                 {/* Placeholder for image */}
-                 <span className="text-sm">Project Preview</span>
-               </div>
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
             </div>
           </div>
         ))}
