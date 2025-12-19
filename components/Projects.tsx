@@ -6,8 +6,8 @@ import Image from 'next/image';
 
 const projects = [
   {
-    title: "GenAI Workflow Frontend",
-    description: "A modern, mobile-first RAG-Agent dashboard interface built with React and Vite. Features real-time metrics monitoring, animation-rich chat interface, and system health status.",
+    title: "Agent RAG avec Monitoring",
+    description: "Une interface de tableau de bord RAG-Agent moderne et optimisée pour les mobiles, développée avec React et Vite. Elle propose une surveillance des indicateurs en temps réel, une interface de chat animée et un état de santé du système.",
     tags: ["React", "Vite", "RAG", "CoVe", "QDrant", "Docker", "Tailwind CSS"],
     links: { demo: "#", repo: "#" },
     image: "/project-1.png" // Placeholder
@@ -21,7 +21,7 @@ const projects = [
   },
   {
     title: "Legal Contract Auditor (Legal/Finance)",
-    description: "Un modèle qui prend une clause contractuelle en entrée et identifie les <br>langages à haut risque</br> ou les écarts par rapport aux clauses standard, en citant des principes juridiques spécifiques.",
+    description: "Un modèle qui prend une clause contractuelle en entrée et identifie les langages à haut risque ou les écarts par rapport aux clauses standard, en citant des principes juridiques spécifiques.",
     tags: ["Kaggle", "Python", "NEFTune", "vLLM", "transformers"],
     links: { demo: "#", repo: "#" },
     image: "/project-3.png" // Placeholder
