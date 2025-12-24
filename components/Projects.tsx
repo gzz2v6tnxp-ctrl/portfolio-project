@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Section from './ui/Section';
-import { ExternalLink, Github, CheckCircle, Clock, ZoomIn } from 'lucide-react';
+import { ExternalLink, Github, CheckCircle, Clock, ZoomIn, Play, Server, Code, Database } from 'lucide-react';
 import Image from 'next/image';
 import { useLanguage } from '@/lib/LanguageContext';
 import { useState } from 'react';
@@ -16,9 +16,13 @@ const projects = [
       fr: "Une interface de tableau de bord RAG-Agent moderne et optimisée pour les mobiles, développée avec React et Vite. Surveillance des indicateurs en temps réel, interface de chat animée et état de santé du système. Implémente CoVe (Chain of Verification) pour des réponses fiables."
     },
     tags: ["React", "Vite", "RAG", "CoVe", "QDrant", "Docker", "Tailwind CSS"],
-    links: { demo: "#", repo: "https://github.com/gzz2v6tnxp-ctrl/genai-workflow-automate" },
+    links: {
+      codeSource: "https://github.com/gzz2v6tnxp-ctrl/genai-workflow-automate",
+      demoVideo: "" // Ajouter URL Loom si disponible
+    },
     image: "/images/1764792239952.jpg",
-    status: "completed" as const
+    status: "completed" as const,
+    projectType: "fullstack" as const
   },
   {
     title: "Clinical Scribe (Healthcare Domain)",
@@ -26,10 +30,15 @@ const projects = [
       en: "Fine-tuned LLaMA 3 8B to transform unstructured doctor-patient transcriptions into structured clinical notes (SOAP format). Production-ready pipeline with Airflow orchestration, LoRA fine-tuning, and ROUGE-L evaluation metrics.",
       fr: "Fine-tuning de LLaMA 3 8B pour transformer des transcriptions médecin-patient non structurées en notes cliniques structurées (format SOAP). Pipeline prêt pour la production avec orchestration Airflow, fine-tuning LoRA et métriques d'évaluation ROUGE-L."
     },
-    tags: ["Python", "Airflow", "Kaggle", "PEFT", "LoRA", "ROUGE-L", "Transformers", "LLaMA 3"],
-    links: { demo: "#", repo: "https://github.com/gzz2v6tnxp-ctrl/clinical-scribe" },
-    image: "",
-    status: "completed" as const
+    tags: ["Python", "Airflow", "Kaggle", "PEFT", "LoRA", "ROUGE-L", "BERTScore", "Transformers", "LLaMA 3"],
+    links: {
+      codeSource: "https://github.com/gzz2v6tnxp-ctrl/clinical-scribe",
+      demoVideo: ""
+    },
+    image: "/images/Gemini_Generated_Image_dz6th6dz6th6dz6t.png",
+    model_ripo: "https://huggingface.co/Irina-Igmm/clinical-scribe-llama-3-merged",
+    status: "completed" as const,
+    projectType: "api" as const // Backend/API project
   },
   {
     title: "Fine-tuning SDXL LoRA DreamBooth",
@@ -38,9 +47,14 @@ const projects = [
       fr: "Modèle de génération d'images avancé utilisant DreamBooth + LoRA sur SDXL. Combine Midjourney pour des images de base de haute qualité, Albumentations pour l'augmentation, StyleGAN2-ADA pour la diversité, et BLIP+LLM pour l'affinement des légendes."
     },
     tags: ["Stable Diffusion XL", "DreamBooth", "LoRA", "StyleGAN2-ADA", "BLIP", "Albumentations", "Hugging Face"],
-    links: { demo: "https://huggingface.co/Irina-Igmm/cat_brave_leader_LoRA", repo: "https://huggingface.co/Irina-Igmm/cat_brave_leader_LoRA" },
+    links: {
+      demo: "https://huggingface.co/Irina-Igmm/cat_brave_leader_LoRA",
+      codeSource: "https://huggingface.co/Irina-Igmm/cat_brave_leader_LoRA",
+      demoVideo: ""
+    },
     image: "/images/07_seed49_a_photo_of_a_cute_cat_on_a_bucket_at_the.png",
-    status: "completed" as const
+    status: "completed" as const,
+    projectType: "fullstack" as const
   },
   {
     title: "Credit Risk Scoring via Anomaly Detection",
@@ -49,9 +63,13 @@ const projects = [
       fr: "Système de prédiction du risque crédit basé sur le ML utilisant des techniques de détection d'anomalies. Gère les jeux de données déséquilibrés avec feature engineering avancé et XGBoost. Déployé en API REST avec FastAPI."
     },
     tags: ["XGBoost", "Imbalanced Learning", "Feature Engineering", "FastAPI", "Scikit-learn"],
-    links: { demo: "#", repo: "#" },
-    image: "",
-    status: "in-progress" as const
+    links: {
+      codeSource: "#",
+      demoVideo: ""
+    },
+    image: "/images/intro_anomaly_detection_plot.png",
+    status: "in-progress" as const,
+    projectType: "api" as const // Backend/API project
   }
 ];
 
@@ -112,6 +130,13 @@ export default function Projects() {
                     {t.projects.inProgress}
                   </span>
                 )}
+                {/* Badge Backend Only pour les projets API */}
+                {project.projectType === 'api' && (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-sm">
+                    <Server className="w-3.5 h-3.5" />
+                    {t.projects.backendOnly}
+                  </span>
+                )}
               </div>
               <p className="text-gray-400 text-lg leading-relaxed">{project.description[language]}</p>
               <motion.div
@@ -135,23 +160,60 @@ export default function Projects() {
                   </motion.span>
                 ))}
               </motion.div>
-              <div className="flex gap-4 pt-4">
+              <div className="flex flex-wrap gap-4 pt-4">
+                {/* Bouton Code Source - toujours affiché */}
                 <motion.a
-                  href={project.links.demo}
+                  href={project.links.codeSource}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="flex items-center gap-2 text-sm font-medium hover:text-gray-300 transition-colors"
                 >
-                  <ExternalLink className="w-4 h-4" /> {t.projects.liveDemo}
+                  <Code className="w-4 h-4" /> {t.projects.codeSource}
                 </motion.a>
-                <motion.a
-                  href={project.links.repo}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center gap-2 text-sm font-medium hover:text-gray-300 transition-colors"
-                >
-                  <Github className="w-4 h-4" /> {t.projects.code}
-                </motion.a>
+
+                {/* Bouton Live Demo - affiché seulement si une démo existe */}
+                {project.links.demo && (
+                  <motion.a
+                    href={project.links.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center gap-2 text-sm font-medium hover:text-gray-300 transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" /> {t.projects.liveDemo}
+                  </motion.a>
+                )}
+
+                {/* Bouton Vidéo Démo - affiché seulement si une vidéo Loom/démo existe */}
+                {project.links.demoVideo && (
+                  <motion.a
+                    href={project.links.demoVideo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center gap-2 text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors"
+                  >
+                    <Play className="w-4 h-4" /> {t.projects.watchDemo}
+                  </motion.a>
+                )}
+
+                {/* Bouton Model Repo (Hugging Face) - affiché si model_ripo existe */}
+                {(project as any).model_ripo && (
+                  <motion.a
+                    href={(project as any).model_ripo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center gap-2 text-sm font-medium text-yellow-400 hover:text-yellow-300 transition-colors"
+                  >
+                    <Database className="w-4 h-4" /> {t.projects.modelRepo}
+                  </motion.a>
+                )}
               </div>
             </div>
 

@@ -6,12 +6,13 @@ export const translations = {
             experience: "Experience",
             tools: "Tools",
             about: "About",
+            learning: "Learning",
             contact: "Contact Me"
         },
         // Hero
         hero: {
             greeting: "Hello, I'm a",
-            title: "ML Engineer",
+            title: "Data Scientist / ML Engineer",
             subtitle: "Production-Ready AI",
             specialization: "Specialized in",
             skill1: "MLOps",
@@ -26,7 +27,11 @@ export const translations = {
             completed: "Completed",
             inProgress: "In Progress",
             liveDemo: "Live Demo",
-            code: "Code"
+            code: "Code",
+            codeSource: "Code Source",
+            backendOnly: "Backend Only",
+            watchDemo: "Watch Demo",
+            modelRepo: "Model Repo"
         },
         // About
         about: {
@@ -51,6 +56,15 @@ export const translations = {
             title: "Experience",
             since: "Since"
         },
+        // Learning
+        learning: {
+            title: "Continuous Learning",
+            subtitle: "Currently investing in critical domains to stay at the cutting edge of AI/ML",
+            inProgress: "In Progress",
+            upcoming: "Next Target",
+            viewCourse: "View Course",
+            commitment: "\"Committed to continuous learning — I believe staying current with the latest advances in AI/ML is essential for building production-grade solutions.\""
+        },
         // Footer
         footer: {
             copyright: "Built with Next.js & Tailwind CSS."
@@ -63,12 +77,13 @@ export const translations = {
             experience: "Expérience",
             tools: "Outils",
             about: "À propos",
+            learning: "Formation",
             contact: "Me Contacter"
         },
         // Hero
         hero: {
             greeting: "Bonjour, je suis",
-            title: "ML Engineer",
+            title: "Data Scientist / ML Engineer",
             subtitle: "Production-Ready AI",
             specialization: "Spécialisé en",
             skill1: "MLOps",
@@ -83,7 +98,11 @@ export const translations = {
             completed: "Terminé",
             inProgress: "En cours",
             liveDemo: "Démo",
-            code: "Code"
+            code: "Code",
+            codeSource: "Code Source",
+            backendOnly: "Backend Uniquement",
+            watchDemo: "Voir la Démo",
+            modelRepo: "Modèle (Hugging Face)"
         },
         // About
         about: {
@@ -107,6 +126,15 @@ export const translations = {
         experience: {
             title: "Expérience",
             since: "Depuis"
+        },
+        // Learning
+        learning: {
+            title: "Formation Continue",
+            subtitle: "J'investis actuellement dans des domaines critiques pour rester à la pointe de l'IA/ML",
+            inProgress: "En cours",
+            upcoming: "Prochain objectif",
+            viewCourse: "Voir le cours",
+            commitment: "\"Engagée dans l'apprentissage continu — je crois que rester à jour avec les dernières avancées en IA/ML est essentiel pour construire des solutions de qualité production.\""
         },
         // Footer
         footer: {

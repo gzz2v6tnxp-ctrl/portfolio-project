@@ -11,6 +11,7 @@ export default function Header() {
   const navItems = [
     { name: t.nav.projects, href: '#projects' },
     { name: t.nav.about, href: '#about' },
+    { name: t.nav.learning, href: '#learning' },
     { name: t.nav.experience, href: '#experience' },
     { name: t.nav.tools, href: '#skills' },
   ];
@@ -51,7 +52,9 @@ export default function Header() {
         </motion.button>
 
         <a
-          href="mailto:irinasitra67@gmail.com"
+          href="https://calendar.app.google/zUHCNk88AFYwwBveA"
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-4 py-2 text-sm font-medium text-black bg-white rounded-full hover:bg-gray-200 transition-colors"
         >
           {t.nav.contact}

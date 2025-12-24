@@ -30,7 +30,7 @@ export default function Footer() {
               <span className="text-sm">GitHub</span>
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/"
+              href="https://www.linkedin.com/in/sitraka-l-ravelojaona/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -2 }}
