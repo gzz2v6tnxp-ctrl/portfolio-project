@@ -13,12 +13,13 @@ export const translations = {
         hero: {
             greeting: "Hello, I'm a",
             title: "Data Scientist / ML Engineer",
-            subtitle: "Production-Ready AI",
+            subtitle: "for Production",
             specialization: "Specialized in",
             skill1: "MLOps",
             skill2: "Applied NLP",
             description: "From research to production — I build robust, scalable AI solutions with end-to-end pipelines. Specializing in LLM deployment, RAG systems, and ML infrastructure.",
             viewWork: "View Work",
+            getResume: "Get Resume",
             availableBadge: "Available for Remote Work"
         },
         // Projects
@@ -84,12 +85,13 @@ export const translations = {
         hero: {
             greeting: "Bonjour, je suis",
             title: "Data Scientist / ML Engineer",
-            subtitle: "Production-Ready AI",
+            subtitle: "pour la Production",
             specialization: "Spécialisé en",
             skill1: "MLOps",
             skill2: "NLP Appliqué",
             description: "De la recherche à la production — je construis des solutions IA robustes et évolutives avec des pipelines de bout en bout. Spécialisée dans le déploiement de LLM, les systèmes RAG et l'infrastructure ML.",
             viewWork: "Voir mes travaux",
+            getResume: "Télécharger CV",
             availableBadge: "Disponible en Remote"
         },
         // Projects

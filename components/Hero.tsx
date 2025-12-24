@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/lib/LanguageContext';
+import { FileDown } from 'lucide-react';
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -85,6 +86,18 @@ export default function Hero() {
             >
               {t.hero.viewWork}
             </motion.a>
+
+            <motion.a
+              href="/CVIrinasoaRavelojaona_en.pdf"
+              download="Sitraka_Laura_Resume.pdf"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center gap-2 px-8 py-3 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-medium rounded-full hover:bg-emerald-500/20 transition-all"
+            >
+              <FileDown className="w-5 h-5" />
+              {t.hero.getResume}
+            </motion.a>
+
             <motion.a
               href="https://github.com/gzz2v6tnxp-ctrl"
               target="_blank"

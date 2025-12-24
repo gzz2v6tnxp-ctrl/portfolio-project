@@ -79,8 +79,8 @@ const getSkills = (language: 'en' | 'fr') => [
     category: language === 'en' ? "Languages" : "Langues",
     icon: <MessageCircle className="w-6 h-6" />,
     items: [
-      language === 'en' ? "Fluent French" : "Français courant",
-      language === 'en' ? "Professional English" : "Anglais professionnel"
+      language === 'en' ? "Fluent French - C1" : "Français courant - C1",
+      language === 'en' ? "Professional English - B2" : "Anglais professionnel - B"
     ]
   }
 ];
