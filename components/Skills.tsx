@@ -67,14 +67,7 @@ const getSkills = (language: 'en' | 'fr') => [
       language === 'en' ? "OCR" : "Reconnaissance Optique de Caractères"
     ]
   },
-  {
-    category: language === 'en' ? "Certifications" : "Certifications",
-    icon: <Award className="w-6 h-6" />,
-    items: [
-      language === 'en' ? "Columbia University Certified" : "Certifiée Columbia University",
-      "Datatour 2025 Finalist"
-    ]
-  },
+
   {
     category: language === 'en' ? "Languages" : "Langues",
     icon: <MessageCircle className="w-6 h-6" />,

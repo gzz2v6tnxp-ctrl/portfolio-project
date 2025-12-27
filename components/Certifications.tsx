@@ -47,6 +47,20 @@ const certifications = [
             en: "Certificate of participation in Datatour 2025, validating engagement with the data community and latest industry trends.",
             fr: "Certificat de participation au Datatour 2025, validant l'engagement auprès de la communauté data et les dernières tendances du secteur."
         }
+    },
+    {
+        title: {
+            en: "Columbia University Certified",
+            fr: "Certifié Columbia University"
+        },
+        issuer: "Columbia University",
+        date: "2024",
+        url: "#",
+        icon: "columbia",
+        description: {
+            en: "Certification from Columbia University.",
+            fr: "Certification de l'Université Columbia."
+        }
     }
 ];
 
