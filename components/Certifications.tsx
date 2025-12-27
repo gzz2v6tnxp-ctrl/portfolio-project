@@ -55,7 +55,7 @@ const certifications = [
         },
         issuer: "Columbia University",
         date: "2024",
-        url: "#",
+        url: "https://badges.plus.columbia.edu/ca158ce4-b301-46dc-b90f-5b92e2c30f6d",
         icon: "columbia",
         description: {
             en: "Certification from Columbia University.",
