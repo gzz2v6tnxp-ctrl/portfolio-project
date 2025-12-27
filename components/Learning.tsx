@@ -35,36 +35,6 @@ const currentLearning = [
             en: "Deep dive into statistics and probability theory essential for data science",
             fr: "Approfondissement des statistiques et de la théorie des probabilités essentielles pour la data science"
         }
-    },
-    {
-        title: {
-            en: "AWS Certified AI Practitioner",
-            fr: "AWS Certified AI Practitioner"
-        },
-        provider: "Amazon Web Services",
-        type: "certification" as const,
-        status: "upcoming" as const,
-        url: "https://aws.amazon.com/fr/certification/certified-ai-practitioner/",
-        icon: "aws",
-        description: {
-            en: "Next certification target: Validate expertise in AI/ML concepts and AWS AI services",
-            fr: "Prochaine certification visée : Valider l'expertise en concepts IA/ML et services AWS AI"
-        }
-    },
-    {
-        title: {
-            en: "Datatour 2025 Participation",
-            fr: "Participation au Datatour 2025"
-        },
-        provider: "Datatour",
-        type: "certification" as const,
-        status: "completed" as const,
-        url: "https://drive.google.com/file/d/1PEwXtr2fuLAv8vt5lkEvw01LHaFpDHk7/view?usp=sharing",
-        icon: "datatour",
-        description: {
-            en: "Certificate of participation in Datatour 2025, validating engagement with the data community and latest industry trends.",
-            fr: "Certificat de participation au Datatour 2025, validant l'engagement auprès de la communauté data et les dernières tendances du secteur."
-        }
     }
 ];
 

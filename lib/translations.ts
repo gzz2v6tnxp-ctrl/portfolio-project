@@ -6,6 +6,7 @@ export const translations = {
             experience: "Experience",
             tools: "Tools",
             about: "About",
+            certifications: "Certifications",
             learning: "Learning",
             contact: "Contact Me"
         },
@@ -67,6 +68,14 @@ export const translations = {
             viewCourse: "View Course",
             commitment: "\"Committed to continuous learning — I believe staying current with the latest advances in AI/ML is essential for building production-grade solutions.\""
         },
+        // Certifications
+        certifications: {
+            title: "Certifications",
+            subtitle: "Validated expertise in cloud computing, AI, and data science.",
+            completed: "Completed",
+            upcoming: "In Progress",
+            viewCertificate: "View Certificate"
+        },
         // Footer
         footer: {
             copyright: "Built with Next.js & Tailwind CSS."
@@ -79,6 +88,7 @@ export const translations = {
             experience: "Expérience",
             tools: "Outils",
             about: "À propos",
+            certifications: "Certifications",
             learning: "Formation",
             contact: "Me Contacter"
         },
@@ -139,6 +149,14 @@ export const translations = {
             upcoming: "Prochain objectif",
             viewCourse: "Voir le cours",
             commitment: "\"Engagée dans l'apprentissage continu — je crois que rester à jour avec les dernières avancées en IA/ML est essentiel pour construire des solutions de qualité production.\""
+        },
+        // Certifications
+        certifications: {
+            title: "Certifications",
+            subtitle: "Expertise validée en cloud computing, IA et data science.",
+            completed: "Terminé",
+            upcoming: "En cours",
+            viewCertificate: "Voir le certificat"
         },
         // Footer
         footer: {
