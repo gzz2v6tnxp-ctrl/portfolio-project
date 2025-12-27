@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Section from './ui/Section';
 import { useLanguage } from '@/lib/LanguageContext';
-import { BookOpen, Target, ExternalLink, GraduationCap, Award, TrendingUp } from 'lucide-react';
+import { BookOpen, Target, ExternalLink, GraduationCap, Award, TrendingUp, CheckCircle } from 'lucide-react';
 
 const currentLearning = [
     {
@@ -50,6 +50,21 @@ const currentLearning = [
             en: "Next certification target: Validate expertise in AI/ML concepts and AWS AI services",
             fr: "Prochaine certification visée : Valider l'expertise en concepts IA/ML et services AWS AI"
         }
+    },
+    {
+        title: {
+            en: "Datatour 2025 Participation",
+            fr: "Participation au Datatour 2025"
+        },
+        provider: "Datatour",
+        type: "certification" as const,
+        status: "completed" as const,
+        url: "https://drive.google.com/file/d/1PEwXtr2fuLAv8vt5lkEvw01LHaFpDHk7/view?usp=sharing",
+        icon: "datatour",
+        description: {
+            en: "Certificate of participation in Datatour 2025, validating engagement with the data community and latest industry trends.",
+            fr: "Certificat de participation au Datatour 2025, validant l'engagement auprès de la communauté data et les dernières tendances du secteur."
+        }
     }
 ];
 
@@ -83,6 +98,14 @@ export default function Learning() {
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-medium">
                     <TrendingUp className="w-3 h-3" />
                     {t.learning.inProgress}
+                </span>
+            );
+        }
+        if (status === 'completed') {
+            return (
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-medium">
+                    <CheckCircle className="w-3 h-3" />
+                    {t.learning.completed}
                 </span>
             );
         }

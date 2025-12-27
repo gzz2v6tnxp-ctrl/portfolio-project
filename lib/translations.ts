@@ -62,6 +62,7 @@ export const translations = {
             title: "Continuous Learning",
             subtitle: "Currently investing in critical domains to stay at the cutting edge of AI/ML",
             inProgress: "In Progress",
+            completed: "Completed",
             upcoming: "Next Target",
             viewCourse: "View Course",
             commitment: "\"Committed to continuous learning — I believe staying current with the latest advances in AI/ML is essential for building production-grade solutions.\""
@@ -134,6 +135,7 @@ export const translations = {
             title: "Formation Continue",
             subtitle: "J'investis actuellement dans des domaines critiques pour rester à la pointe de l'IA/ML",
             inProgress: "En cours",
+            completed: "Terminé",
             upcoming: "Prochain objectif",
             viewCourse: "Voir le cours",
             commitment: "\"Engagée dans l'apprentissage continu — je crois que rester à jour avec les dernières avancées en IA/ML est essentiel pour construire des solutions de qualité production.\""
