@@ -7,18 +7,17 @@ export const translations = {
             tools: "Tools",
             about: "About",
             certifications: "Certifications",
-            learning: "Learning",
             contact: "Contact Me"
         },
         // Hero
         hero: {
             greeting: "Hello, I'm a",
-            title: "Data Scientist / ML Engineer",
-            subtitle: "for Production",
+            title: "AI Engineer",
+            subtitle: "LLM & Production Systems",
             specialization: "Specialized in",
-            skill1: "MLOps",
-            skill2: "Applied NLP",
-            description: "From research to production — I build robust, scalable AI solutions with end-to-end pipelines. Specializing in LLM deployment, RAG systems, and ML infrastructure.",
+            skill1: "RAG & Agents",
+            skill2: "MLOps",
+            description: "From research to production — I build scalable AI systems with end-to-end pipelines. Specializing in LLM deployment, Agentic RAG, Computer Vision, and ML infrastructure with production-grade observability.",
             viewWork: "View Work",
             getResume: "Get Resume",
             availableBadge: "Available for Remote Work"
@@ -38,12 +37,12 @@ export const translations = {
         // About
         about: {
             title: "About Me",
-            bio1: "ML Engineer with",
+            bio1: "AI Engineer with",
             experience: "3+ years",
-            bio2: "of experience transforming AI research into production systems. I specialize in",
+            bio2: "of experience building production AI systems. I specialize in",
             bio3: "end-to-end ML pipelines",
-            bio4: ", from data processing to deployment.",
-            bio5: "My focus: building reliable AI systems that work at scale. I've deployed LLMs, RAG architectures, and computer vision models in production environments with proper monitoring and evaluation.",
+            bio4: ", from data processing to deployment and monitoring.",
+            bio5: "I've deployed LLMs, Agentic RAG architectures, and Computer Vision models in production environments handling real traffic — with proper observability via Langfuse and Arize Phoenix. I focus on systems that deliver measurable business impact.",
             remoteTitle: "Remote Work Ready",
             location: "Based in Madagascar (UTC+3)",
             hours: "Flexible hours, overlap with EU & US timezones",
@@ -57,16 +56,6 @@ export const translations = {
         experience: {
             title: "Experience",
             since: "Since"
-        },
-        // Learning
-        learning: {
-            title: "Continuous Learning",
-            subtitle: "Currently investing in critical domains to stay at the cutting edge of AI/ML",
-            inProgress: "In Progress",
-            completed: "Completed",
-            upcoming: "Next Target",
-            viewCourse: "View Course",
-            commitment: "\"Committed to continuous learning — I believe staying current with the latest advances in AI/ML is essential for building production-grade solutions.\""
         },
         // Certifications
         certifications: {
@@ -89,18 +78,17 @@ export const translations = {
             tools: "Outils",
             about: "À propos",
             certifications: "Certifications",
-            learning: "Formation",
             contact: "Me Contacter"
         },
         // Hero
         hero: {
             greeting: "Bonjour, je suis",
-            title: "Data Scientist / ML Engineer",
-            subtitle: "pour la Production",
-            specialization: "Spécialisé en",
-            skill1: "MLOps",
-            skill2: "NLP Appliqué",
-            description: "De la recherche à la production — je construis des solutions IA robustes et évolutives avec des pipelines de bout en bout. Spécialisée dans le déploiement de LLM, les systèmes RAG et l'infrastructure ML.",
+            title: "AI Engineer",
+            subtitle: "LLM & Production Systems",
+            specialization: "Spécialisée en",
+            skill1: "RAG & Agents",
+            skill2: "MLOps",
+            description: "De la recherche à la production — je construis des systèmes IA scalables avec des pipelines end-to-end. Spécialisée dans le déploiement de LLM, le RAG Agentique, la Computer Vision et l'infrastructure ML avec observabilité production.",
             viewWork: "Voir mes travaux",
             getResume: "Télécharger CV",
             availableBadge: "Disponible en Remote"
@@ -120,12 +108,12 @@ export const translations = {
         // About
         about: {
             title: "À propos de moi",
-            bio1: "Ingénieure ML avec",
+            bio1: "AI Engineer avec",
             experience: "3+ ans",
-            bio2: "d'expérience dans la transformation de la recherche IA en systèmes de production. Je me spécialise dans",
+            bio2: "d'expérience dans la construction de systèmes IA en production. Je me spécialise dans",
             bio3: "les pipelines ML de bout en bout",
-            bio4: ", de la préparation des données au déploiement.",
-            bio5: "Mon objectif : créer des systèmes IA fiables qui fonctionnent à grande échelle. J'ai déployé des LLM, des architectures RAG et des modèles de vision par ordinateur en production avec un suivi et une évaluation appropriés.",
+            bio4: ", de la préparation des données au déploiement et monitoring.",
+            bio5: "J'ai déployé des LLM, des architectures RAG Agentiques et des modèles de Computer Vision en production gérant du trafic réel — avec observabilité via Langfuse et Arize Phoenix. Je me concentre sur les systèmes à impact business mesurable.",
             remoteTitle: "Prête pour le Remote",
             location: "Basée à Madagascar (UTC+3)",
             hours: "Horaires flexibles, chevauchement avec les fuseaux EU & US",
@@ -139,16 +127,6 @@ export const translations = {
         experience: {
             title: "Expérience",
             since: "Depuis"
-        },
-        // Learning
-        learning: {
-            title: "Formation Continue",
-            subtitle: "J'investis actuellement dans des domaines critiques pour rester à la pointe de l'IA/ML",
-            inProgress: "En cours",
-            completed: "Terminé",
-            upcoming: "Prochain objectif",
-            viewCourse: "Voir le cours",
-            commitment: "\"Engagée dans l'apprentissage continu — je crois que rester à jour avec les dernières avancées en IA/ML est essentiel pour construire des solutions de qualité production.\""
         },
         // Certifications
         certifications: {

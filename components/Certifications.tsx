@@ -3,18 +3,30 @@
 import { motion } from 'framer-motion';
 import Section from './ui/Section';
 import { useLanguage } from '@/lib/LanguageContext';
-import { Award, ExternalLink, CheckCircle, Calendar } from 'lucide-react';
+import { Award, ExternalLink, CheckCircle } from 'lucide-react';
 
 const certifications = [
     {
         title: {
-            en: "Huawei Certified ICT Associate - Cloud Computing",
-            fr: "Huawei Certified ICT Associate - Cloud Computing"
+            en: "Columbia University — Data/AI Specialization",
+            fr: "Columbia University — Spécialisation Data/IA"
+        },
+        issuer: "Columbia University",
+        date: "2024",
+        url: "https://badges.plus.columbia.edu/ca158ce4-b301-46dc-b90f-5b92e2c30f6d",
+        description: {
+            en: "Certified specialization in Data Science and Artificial Intelligence from Columbia University.",
+            fr: "Spécialisation certifiée en Data Science et Intelligence Artificielle de l'Université Columbia."
+        }
+    },
+    {
+        title: {
+            en: "Huawei Certified ICT Associate — Cloud Computing",
+            fr: "Huawei Certified ICT Associate — Cloud Computing"
         },
         issuer: "Huawei",
-        date: "2023-04",
-        url: "#", // Placeholder as no URL was provided
-        icon: "huawei",
+        date: "2023",
+        url: "#",
         description: {
             en: "Validated knowledge in Cloud Computing technologies, including virtualization, storage, and network.",
             fr: "Connaissances validées en technologies Cloud Computing, y compris la virtualisation, le stockage et le réseau."
@@ -22,44 +34,15 @@ const certifications = [
     },
     {
         title: {
-            en: "AWS Certified AI Practitioner",
-            fr: "AWS Certified AI Practitioner"
-        },
-        issuer: "Amazon Web Services",
-        date: "Upcoming",
-        url: "https://aws.amazon.com/fr/certification/certified-ai-practitioner/",
-        icon: "aws",
-        description: {
-            en: "Next certification target: Validate expertise in AI/ML concepts and AWS AI services",
-            fr: "Prochaine certification visée : Valider l'expertise en concepts IA/ML et services AWS AI"
-        }
-    },
-    {
-        title: {
-            en: "Datatour 2025 Participation",
-            fr: "Participation au Datatour 2025"
+            en: "Datatour 2025 — Finalist",
+            fr: "Datatour 2025 — Finaliste"
         },
         issuer: "Datatour",
         date: "2025",
         url: "https://drive.google.com/file/d/1PEwXtr2fuLAv8vt5lkEvw01LHaFpDHk7/view?usp=sharing",
-        icon: "datatour",
         description: {
-            en: "Certificate of participation in Datatour 2025, validating engagement with the data community and latest industry trends.",
-            fr: "Certificat de participation au Datatour 2025, validant l'engagement auprès de la communauté data et les dernières tendances du secteur."
-        }
-    },
-    {
-        title: {
-            en: "Columbia University Certified",
-            fr: "Certifié Columbia University"
-        },
-        issuer: "Columbia University",
-        date: "2024",
-        url: "https://badges.plus.columbia.edu/ca158ce4-b301-46dc-b90f-5b92e2c30f6d",
-        icon: "columbia",
-        description: {
-            en: "Certification from Columbia University.",
-            fr: "Certification de l'Université Columbia."
+            en: "Finalist in the Datatour 2025 national data competition.",
+            fr: "Finaliste de la compétition nationale de données Datatour 2025."
         }
     }
 ];
@@ -119,49 +102,35 @@ export default function Certifications() {
                         whileHover={{ y: -8, scale: 1.02 }}
                         className="group relative p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-white/20 transition-all duration-300"
                     >
-                        {/* Gradient glow effect on hover */}
                         <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-500/10 via-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                         <div className="relative z-10">
-                            {/* Header */}
                             <div className="flex items-start justify-between mb-4">
                                 <div className="p-3 rounded-xl bg-white/5 text-white/70 group-hover:text-purple-400 transition-colors">
                                     <Award className="w-6 h-6" />
                                 </div>
-                                {item.date !== "Upcoming" ? (
-                                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-medium">
-                                        <CheckCircle className="w-3 h-3" />
-                                        {t.certifications.completed}
-                                    </span>
-                                ) : (
-                                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-medium">
-                                        <Calendar className="w-3 h-3" />
-                                        {t.certifications.upcoming}
-                                    </span>
-                                )}
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-medium">
+                                    <CheckCircle className="w-3 h-3" />
+                                    {t.certifications.completed}
+                                </span>
                             </div>
 
-                            {/* Title */}
                             <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors">
                                 {item.title[language]}
                             </h3>
 
-                            {/* Issuer */}
                             <div className="text-sm text-purple-400 font-medium mb-3">
                                 {item.issuer}
                             </div>
 
-                            {/* Date */}
                             <div className="text-xs text-gray-500 mb-3">
                                 {item.date}
                             </div>
 
-                            {/* Description */}
                             <p className="text-gray-400 text-sm leading-relaxed mb-4">
                                 {item.description[language]}
                             </p>
 
-                            {/* Link indicator */}
                             <div className="flex items-center gap-2 text-sm text-gray-500 group-hover:text-white/70 transition-colors">
                                 <ExternalLink className="w-4 h-4" />
                                 {t.certifications.viewCertificate}

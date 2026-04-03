@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Section from './ui/Section';
-import { ExternalLink, Github, CheckCircle, Clock, ZoomIn, Play, Server, Code, Database } from 'lucide-react';
+import { ExternalLink, Github, CheckCircle, ZoomIn, Play, Server, Code, Database } from 'lucide-react';
 import Image from 'next/image';
 import { useLanguage } from '@/lib/LanguageContext';
 import { useState } from 'react';
@@ -12,13 +12,13 @@ const projects = [
   {
     title: "Agent RAG avec Monitoring",
     description: {
-      en: "A modern, mobile-optimized RAG-Agent dashboard interface built with React and Vite. Features real-time metrics monitoring, animated chat interface, and system health status. Implements CoVe (Chain of Verification) for reliable responses.",
-      fr: "Une interface de tableau de bord RAG-Agent moderne et optimisée pour les mobiles, développée avec React et Vite. Surveillance des indicateurs en temps réel, interface de chat animée et état de santé du système. Implémente CoVe (Chain of Verification) pour des réponses fiables."
+      en: "Production multimodal sales assistant (WhatsApp/Messenger) handling ~100 conversations/day over 800+ products. Hybrid text/image search (BM25 + multimodal embeddings, Qdrant) with real-time ordering. 80% relevance rate. Implements CoVe (Chain of Verification) for reliable responses. Real-time metrics monitoring dashboard.",
+      fr: "Assistant de vente multimodal en production (WhatsApp/Messenger) traitant ~100 conversations/jour sur 800+ produits. Recherche hybride texte/image (BM25 + Embeddings multimodaux, Qdrant) avec commande en temps réel. Taux de pertinence de 80%. Implémente CoVe (Chain of Verification) pour des réponses fiables. Dashboard de monitoring en temps réel."
     },
-    tags: ["React", "Vite", "RAG", "CoVe", "QDrant", "Docker", "Tailwind CSS"],
+    tags: ["React", "Vite", "RAG", "CoVe", "QDrant", "Docker", "Tailwind CSS", "Gemini", "BM25"],
     links: {
       codeSource: "https://github.com/gzz2v6tnxp-ctrl/genai-workflow-automate",
-      demoVideo: "" // Ajouter URL Loom si disponible
+      demoVideo: ""
     },
     image: "/images/1764792239952.jpg",
     status: "completed" as const,
@@ -27,10 +27,10 @@ const projects = [
   {
     title: "Clinical Scribe (Healthcare Domain)",
     description: {
-      en: "Fine-tuned LLaMA 3 8B to transform unstructured doctor-patient transcriptions into structured clinical notes (SOAP format). Production-ready pipeline with Airflow orchestration, LoRA fine-tuning, and ROUGE-L evaluation metrics.",
-      fr: "Fine-tuning de LLaMA 3 8B pour transformer des transcriptions médecin-patient non structurées en notes cliniques structurées (format SOAP). Pipeline prêt pour la production avec orchestration Airflow, fine-tuning LoRA et métriques d'évaluation ROUGE-L."
+      en: "Fine-tuned LLaMA 3 8B to transform unstructured doctor-patient transcriptions into structured clinical notes (SOAP format). Production-ready pipeline with Airflow orchestration, LoRA fine-tuning, PII anonymization, and ROUGE-L evaluation metrics.",
+      fr: "Fine-tuning de LLaMA 3 8B pour transformer des transcriptions médecin-patient non structurées en notes cliniques structurées (format SOAP). Pipeline prêt pour la production avec orchestration Airflow, fine-tuning LoRA, anonymisation PII et métriques d'évaluation ROUGE-L."
     },
-    tags: ["Python", "Airflow", "Kaggle", "PEFT", "LoRA", "ROUGE-L", "BERTScore", "Transformers", "LLaMA 3"],
+    tags: ["Python", "Airflow", "PEFT", "LoRA", "ROUGE-L", "BERTScore", "Transformers", "LLaMA 3"],
     links: {
       codeSource: "https://github.com/gzz2v6tnxp-ctrl/clinical-scribe",
       demoVideo: ""
@@ -38,38 +38,7 @@ const projects = [
     image: "/images/Gemini_Generated_Image_dz6th6dz6th6dz6t.png",
     model_ripo: "https://huggingface.co/Irina-Igmm/clinical-scribe-llama-3-merged",
     status: "completed" as const,
-    projectType: "api" as const // Backend/API project
-  },
-  {
-    title: "Fine-tuning SDXL LoRA DreamBooth",
-    description: {
-      en: "Advanced image generation model using DreamBooth + LoRA on SDXL. Combines Midjourney for high-quality base images, Albumentations for augmentation, StyleGAN2-ADA for diversity, and BLIP+LLM for caption refinement.",
-      fr: "Modèle de génération d'images avancé utilisant DreamBooth + LoRA sur SDXL. Combine Midjourney pour des images de base de haute qualité, Albumentations pour l'augmentation, StyleGAN2-ADA pour la diversité, et BLIP+LLM pour l'affinement des légendes."
-    },
-    tags: ["Stable Diffusion XL", "DreamBooth", "LoRA", "StyleGAN2-ADA", "BLIP", "Albumentations", "Hugging Face"],
-    links: {
-      demo: "https://huggingface.co/Irina-Igmm/cat_brave_leader_LoRA",
-      codeSource: "https://huggingface.co/Irina-Igmm/cat_brave_leader_LoRA",
-      demoVideo: ""
-    },
-    image: "/images/07_seed49_a_photo_of_a_cute_cat_on_a_bucket_at_the.png",
-    status: "completed" as const,
-    projectType: "fullstack" as const
-  },
-  {
-    title: "Credit Risk Scoring via Anomaly Detection",
-    description: {
-      en: "ML-powered credit risk prediction system using anomaly detection techniques. Handles imbalanced datasets with advanced feature engineering and XGBoost. Deployed as REST API with FastAPI.",
-      fr: "Système de prédiction du risque crédit basé sur le ML utilisant des techniques de détection d'anomalies. Gère les jeux de données déséquilibrés avec feature engineering avancé et XGBoost. Déployé en API REST avec FastAPI."
-    },
-    tags: ["XGBoost", "Imbalanced Learning", "Feature Engineering", "FastAPI", "Scikit-learn"],
-    links: {
-      codeSource: "#",
-      demoVideo: ""
-    },
-    image: "/images/intro_anomaly_detection_plot.png",
-    status: "in-progress" as const,
-    projectType: "api" as const // Backend/API project
+    projectType: "api" as const
   }
 ];
 
@@ -119,18 +88,10 @@ export default function Projects() {
             <div className="order-2 md:order-1 space-y-6">
               <div className="flex flex-wrap items-center gap-3">
                 <h3 className="text-3xl font-bold group-hover:text-gray-300 transition-colors">{project.title}</h3>
-                {project.status === 'completed' ? (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm">
-                    <CheckCircle className="w-3.5 h-3.5" />
-                    {t.projects.completed}
-                  </span>
-                ) : (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-sm">
-                    <Clock className="w-3.5 h-3.5" />
-                    {t.projects.inProgress}
-                  </span>
-                )}
-                {/* Badge Backend Only pour les projets API */}
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm">
+                  <CheckCircle className="w-3.5 h-3.5" />
+                  {t.projects.completed}
+                </span>
                 {project.projectType === 'api' && (
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-sm">
                     <Server className="w-3.5 h-3.5" />
@@ -161,7 +122,6 @@ export default function Projects() {
                 ))}
               </motion.div>
               <div className="flex flex-wrap gap-4 pt-4">
-                {/* Bouton Code Source - toujours affiché */}
                 <motion.a
                   href={project.links.codeSource}
                   target="_blank"
@@ -173,21 +133,6 @@ export default function Projects() {
                   <Code className="w-4 h-4" /> {t.projects.codeSource}
                 </motion.a>
 
-                {/* Bouton Live Demo - affiché seulement si une démo existe */}
-                {project.links.demo && (
-                  <motion.a
-                    href={project.links.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 text-sm font-medium hover:text-gray-300 transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4" /> {t.projects.liveDemo}
-                  </motion.a>
-                )}
-
-                {/* Bouton Vidéo Démo - affiché seulement si une vidéo Loom/démo existe */}
                 {project.links.demoVideo && (
                   <motion.a
                     href={project.links.demoVideo}
@@ -201,7 +146,6 @@ export default function Projects() {
                   </motion.a>
                 )}
 
-                {/* Bouton Model Repo (Hugging Face) - affiché si model_ripo existe */}
                 {(project as any).model_ripo && (
                   <motion.a
                     href={(project as any).model_ripo}
@@ -231,8 +175,6 @@ export default function Projects() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none" />
-
-              {/* Zoom Icon Overlay */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
                 <ZoomIn className="w-12 h-12 text-white drop-shadow-lg" />
               </div>

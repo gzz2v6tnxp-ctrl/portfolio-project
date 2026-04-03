@@ -7,38 +7,38 @@ import { useLanguage } from '@/lib/LanguageContext';
 const experiences = [
   {
     role: {
-      en: "Data/AI Engineer",
-      fr: "Ingénieur DATA/IA"
+      en: "AI Engineer | GenAI, RAG & Computer Vision",
+      fr: "AI Engineer | GenAI, RAG & Computer Vision"
     },
-    company: "Etech Consulting",
+    company: "Malitix",
     period: { en: "Since 2024", fr: "Depuis 2024" },
     description: {
-      en: "Architecture and deployment of end-to-end Data/ML pipelines, combining OCR, LLM and Computer Vision for automated document extraction and anomaly detection. Development of RAG systems enhanced by CoVe technique and classification models (ResNet) deployed as MVP, with rigorous ground truth evaluation.",
-      fr: "Architecture et mise en production de pipelines Data/ML de bout en bout, combinant OCR, LLM et Computer Vision pour l'automatisation de l'extraction documentaire et de la détection d'anomalies. Développement de systèmes RAG fiabilisés par la technique CoVe et de modèles de classification (ResNet) déployés en MVP, avec une évaluation rigoureuse par ground truth."
+      en: "Design and deployment of the company's industrial AI ecosystem. Built a multimodal sales assistant (WhatsApp/Messenger) handling ~100 conversations/day across 800+ products with 80% relevance rate — MVP delivered in 2 weeks. Automated document extraction (~100 docs/day per client) via OCR + LLM, replacing manual Odoo verification with 95% accuracy. Deployed anomaly detection pipeline on banking statements (~200 statements/day) on private cloud under strict data confidentiality constraints. End-to-end observability with Langfuse and Arize Phoenix.",
+      fr: "Conception et déploiement de l'écosystème IA industriel de l'entreprise. Développement d'un assistant de vente multimodal (WhatsApp/Messenger) traitant ~100 conversations/jour sur un catalogue de 800+ produits avec un taux de pertinence de 80% — MVP livré en 2 semaines. Automatisation de l'extraction documentaire (~100 docs/jour par client) via OCR + LLM, remplaçant la vérification manuelle Odoo avec 95% de précision. Pipeline de détection d'anomalies sur relevés bancaires (~200 relevés/jour) en cloud privé sous contrainte de confidentialité stricte. Observabilité end-to-end via Langfuse et Arize Phoenix."
     }
   },
   {
     role: {
-      en: "Data Scientist / ML Engineer",
-      fr: "Data Scientist / ML Engineer"
+      en: "Data Scientist",
+      fr: "Data Scientist"
     },
     company: "Relia Consulting",
     period: { en: "2023 - 2024", fr: "2023 - 2024" },
     description: {
-      en: "Design and deployment of end-to-end Data/ML pipelines, including OCR/LLM hybridization with ground truth evaluation protocol and reliable RAG systems. Development of Computer Vision models (ResNet) and stock prediction with experimental tracking via Weights & Biases to ensure production-grade robustness.",
-      fr: "Conception et déploiement de pipelines Data/ML de bout en bout, incluant l'hybridation OCR/LLM avec protocole d'évaluation par ground truth et systèmes RAG fiabilisés. Développement de modèles de Computer Vision (ResNet) et de prédiction de stocks avec suivi expérimental sous Weights & Biases pour garantir la robustesse des solutions en production."
+      en: "Design of industrial Data/ML pipelines and technical support. Built an accounting chatbot via Rasa with end-to-end data preparation and testing. Developed a stock prediction system using linear regression and Adam optimization with experimental tracking via Weights & Biases.",
+      fr: "Conception de pipelines Data/ML industriels et support technique. Développement d'un chatbot comptable via Rasa avec préparation de données et tests end-to-end. Système de prédiction de stock par régression linéaire et optimisation Adam avec suivi expérimental Weights & Biases."
     }
   },
   {
     role: {
       en: "Freelance Developer",
-      fr: "Développeur freelance"
+      fr: "Développeuse Freelance"
     },
     company: "RKWT OCEAN LTD",
     period: { en: "2021 - 2023", fr: "2021 - 2023" },
     description: {
-      en: "Design and deployment of web applications and PWAs, including strategic PostgreSQL architecture for the Ministry of Agriculture in Madagascar. Development of critical application modules for CNAPS, ensuring system interoperability and implementing social assistance features for maternity benefits.",
-      fr: "Conception et déploiement d'applications web et PWA, incluant le pilotage d'une architecture PostgreSQL stratégique pour le Ministère de l'Agriculture à Madagascar. Développement de modules applicatifs critiques pour la CNAPS, assurant l'interopérabilité des systèmes et la mise en œuvre de fonctionnalités d'aide sociale aux prestations d'accouchement."
+      en: "Design and deployment of web applications and PWAs. Strategic PostgreSQL architecture for the Ministry of Agriculture in Madagascar. Development of critical application modules for CNAPS, ensuring system interoperability and implementing social assistance features for maternity benefits.",
+      fr: "Conception et déploiement d'applications web et PWA. Architecture PostgreSQL stratégique pour le Ministère de l'Agriculture à Madagascar. Développement de modules applicatifs critiques pour la CNAPS, assurant l'interopérabilité des systèmes et la mise en œuvre de fonctionnalités d'aide sociale aux prestations d'accouchement."
     }
   }
 ];

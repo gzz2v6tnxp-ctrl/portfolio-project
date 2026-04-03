@@ -5,7 +5,6 @@ import About from '@/components/About';
 import Experience from '@/components/Experience';
 import Skills from '@/components/Skills';
 import Certifications from '@/components/Certifications';
-import Learning from '@/components/Learning';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
         <About />
         <Skills />
         <Certifications />
-        <Learning />
         <Experience />
         <Footer />
       </div>
