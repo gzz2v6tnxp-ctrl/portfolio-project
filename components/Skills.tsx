@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Section from './ui/Section';
-import { Award, Brain, Cloud, Cpu, Database, MessageCircle, Scan, Terminal } from 'lucide-react';
+import { Brain, Cloud, Cpu, Database, MessageCircle, Scan, Terminal } from 'lucide-react';
 import { useLanguage } from '@/lib/LanguageContext';
 
 const getSkills = (language: 'en' | 'fr') => [

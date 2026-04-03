@@ -2,13 +2,24 @@
 
 import { motion } from 'framer-motion';
 import Section from './ui/Section';
-import { ExternalLink, Github, CheckCircle, ZoomIn, Play, Server, Code, Database } from 'lucide-react';
+import { CheckCircle, ZoomIn, Play, Server, Code, Database } from 'lucide-react';
 import Image from 'next/image';
 import { useLanguage } from '@/lib/LanguageContext';
 import { useState } from 'react';
 import Lightbox from './ui/Lightbox';
 
-const projects = [
+interface Project {
+  title: string;
+  description: { en: string; fr: string };
+  tags: string[];
+  links: { codeSource: string; demoVideo: string };
+  image: string;
+  status: 'completed' | 'in-progress';
+  projectType: 'fullstack' | 'api' | 'frontend';
+  model_ripo?: string;
+}
+
+const projects: Project[] = [
   {
     title: "Agent RAG avec Monitoring",
     description: {
@@ -146,9 +157,9 @@ export default function Projects() {
                   </motion.a>
                 )}
 
-                {(project as any).model_ripo && (
+                {project.model_ripo && (
                   <motion.a
-                    href={(project as any).model_ripo}
+                    href={project.model_ripo}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
